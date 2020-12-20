@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ApiService from "../../service/ApiService";
+import {toastr} from 'react-redux-toastr'
 
 class TextoComponent extends Component {
 
@@ -35,11 +36,11 @@ class TextoComponent extends Component {
                     if (res.data.result.length > 0){
                         this.setState({publicacoes: res.data.result})
                     }else{
-                      //  toastr.warning('Success Message', '', {width:'600px'}); 
+                     toastr.warning('Nenhuma postagem encontrada!')
                     }
                     
             	}else{
-            		this.setState({message : 'Erro ao consultar!'});
+            		toastr.error('Ops... Algo de errado aconteceu!')
             	}
             });
     }
@@ -48,10 +49,9 @@ class TextoComponent extends Component {
         ApiService.deletarPublicacao(publicacao)
            .then(res => {
             if (res.data.status === 200){
-                this.setState({message : 'Erro ao consultar!'});
                 this.refreshPage();
             }else{
-                this.setState({message : 'Erro ao consultar!'});
+                toastr.error('Ops... Algo de errado aconteceu!')
             }
            })
 
@@ -61,10 +61,9 @@ class TextoComponent extends Component {
         ApiService.adicionarLike(publicacao)
            .then(res => {
             if (res.data.status === 200){
-                this.setState({message : 'Erro ao consultar!'});
                 this.refreshPage();
             }else{
-                this.setState({message : 'Erro ao consultar!'});
+                toastr.error('Ops... Algo de errado aconteceu!')
             }
            })
     }
@@ -76,10 +75,9 @@ class TextoComponent extends Component {
         ApiService.adicionarPublicacao(publicacao)
            .then(res => {
             if (res.data.status === 200){
-                this.setState({message : 'Erro ao consultar!'});
                 this.refreshPage();
             }else{
-                this.setState({message : 'Erro ao consultar!'});
+                toastr.error('Ops... Algo de errado aconteceu!')
             }
            })
     }
@@ -171,10 +169,8 @@ class TextoComponent extends Component {
                     )
                 }
 			</div>
-
         );
     }
-
 }
 
 export default TextoComponent;
