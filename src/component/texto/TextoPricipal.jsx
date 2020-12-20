@@ -116,7 +116,7 @@ class TextoComponent extends Component {
                                         </a>
 
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item text-primary" href="#" onClick={() => this.deletarPublicacao(publicacao)}>Delete</a>
+                                            <a class="dropdown-item text-primary" href="#" onClick={() => this.deletarPublicacao(publicacao)}>Excluir</a>
                                         </div>
                                     </div>
                                 </div>
@@ -135,33 +135,6 @@ class TextoComponent extends Component {
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
-                                    
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="card border border-right-0 border-left-0 border-bottom-0 mt-1">
-                                            <section>
-                                                <div class="card p-2 mt-3">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1 pl-2">
-                                                            <a class="text-decoration-none text-capitalize h6 m-0" href="#">Tarzan</a>
-                                                            <p class="small m-0 text-muted">27 mins ago</p>
-                                                        </div>
-                                                        <div >
-                                                            <div class="dropdown">
-                                                                <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="fas fa-chevron-down"></i>
-                                                                </a>
-
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                                    <a class="dropdown-item text-primary" href="#">Edit</a>
-                                                                    <a class="dropdown-item text-primary" href="#">Delete</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </div>
                                     </div>
                                 </footer>
                             </div>
