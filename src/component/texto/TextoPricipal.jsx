@@ -89,7 +89,7 @@ class TextoComponent extends Component {
                     <div class="card-body">
                         <div class=""  >
                             <div class="form-group">
-                                <textarea class="form-control" name="texto" placeholder="No que você está pensando..." value={this.state.texto} onChange={this.onChange}></textarea>
+                                <textarea class="form-control" name="texto" maxLength="255" placeholder="No que você está pensando..." value={this.state.texto} onChange={this.onChange}></textarea>
                             </div>
 
                         </div>
